@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>API de Tarefas</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'tarefas/themes.css' %}">
+    <script src="{% static 'tarefas/themes.js' %}" defer></script>
+</head>
+<body class="home-page">
+    <main class="home-card">
+        <header class="home-header">
+            <h1>API de Tarefas</h1>
+            {% include "tarefas/theme_picker.html" %}
+        </header>
+        <p>
+            API REST para organizar tarefas pessoais. Cada usuário autenticado
+            acessa somente as próprias tarefas.
+        </p>
+        <h2>Comece por aqui</h2>
+        <ul>
+            <li>Faça login em <code>/api/login/</code> para obter um token.</li>
+            <li>Acesse <code>/api/tarefas/</code> para listar ou criar tarefas.</li>
+            <li>Use <code>?concluida=true|false</code> ou
+                <code>?prioridade=baixa|media|alta</code> para filtrar.</li>
+            <li>Envie o token no cabeçalho
+                <code>Authorization: Token &lt;token&gt;</code>.</li>
+        </ul>
+        <div class="home-links">
+            <a href="/api/tarefas/">Explorar a API</a>
+            <a href="/admin/">Abrir o painel administrativo</a>
+        </div>
+    </main>
+</body>
+</html>
