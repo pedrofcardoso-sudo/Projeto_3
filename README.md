@@ -35,8 +35,8 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-O administrador fica em <http://127.0.0.1:8000/admin/>.
-A página inicial em <http://127.0.0.1:8000/> apresenta os principais links e
+O servidor abre por padrão em <http://127.0.0.1:8002/>. O administrador fica
+em <http://127.0.0.1:8002/admin/>. A página inicial apresenta os principais links e
 instruções para começar a usar a API. A página inicial, a interface navegável
 da API e o painel admin permitem escolher entre seis temas (Claro, Noturno,
 Oceano, Floresta, Ameixa e Pôr do sol); a escolha fica salva no navegador.
@@ -112,7 +112,7 @@ $env:DEMO_ADMIN_PASSWORD = "defina-outra-senha-local-forte"
 python manage.py seed_demo --settings=todoapi.demo_settings
 Remove-Item Env:DEMO_USER_PASSWORD
 Remove-Item Env:DEMO_ADMIN_PASSWORD
-python manage.py runserver 127.0.0.1:8001 --settings=todoapi.demo_settings
+python manage.py runserver --settings=todoapi.demo_settings
 ```
 
 O comando de demonstração cria 15 grupos, 15 usuários comuns, 15 tarefas e
