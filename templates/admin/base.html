@@ -1,0 +1,17 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'tarefas/themes.css' %}">
+{% endblock %}
+
+{% block branding %}
+    {{ block.super }}
+    {% include "tarefas/theme_picker.html" %}
+{% endblock %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <script src="{% static 'tarefas/themes.js' %}" defer></script>
+{% endblock %}
